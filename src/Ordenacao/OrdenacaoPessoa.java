@@ -1,6 +1,7 @@
 package Ordenacao;
 
 import javax.management.OperationsException;
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -47,9 +48,13 @@ public class OrdenacaoPessoa {
         ordenacaoPessoa.adicionarPessoa("Tiago", 42, 1.80);
         ordenacaoPessoa.adicionarPessoa("Tiago", 22, 1.60);
 
-        
+        System.out.println("IMPRIMINDO LISTA POR IDADE");
         System.out.println(ordenacaoPessoa.ordenarPorIdade());
-        //System.out.println(ordenacaoPessoa.ordenarPorAltura());
+        System.out.println("--------------------------------");
+
+        System.out.println("IMPRIMINDO LISTA POR ALTURA");
+        System.out.println(ordenacaoPessoa.ordenarPorAltura());
+        System.out.println("--------------------------------");
 
     }
 

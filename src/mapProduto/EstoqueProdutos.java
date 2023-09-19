@@ -5,14 +5,15 @@ import java.util.Map;
 
 public class EstoqueProdutos {
 
-    private Map<Integer, Produto> estoqueProdutosMap;
+    private Map<Long, Produto> estoqueProdutosMap;
 
     public EstoqueProdutos() {
         this.estoqueProdutosMap = new HashMap<>();
     }
 
-    public void adicionarProduto(Integer cod, String nome,  double preco, int quantidade) {
+    public void adicionarProduto(Long cod, String nome,  double preco, int quantidade) {
 
+        Produto produto = new Produto(nome, preco, quantidade);
 
         estoqueProdutosMap.put(cod, new Produto(nome, preco,  quantidade));
 
@@ -69,9 +70,9 @@ public class EstoqueProdutos {
 
         estoque.exibirProdutos();
 
-        estoque.adicionarProduto(1, "Computador", 10.00, 100);
-        estoque.adicionarProduto(2, "notebook", 500.00, 200);
-        estoque.adicionarProduto(3, "Cadeira", 300.00, 5000);
+        estoque.adicionarProduto(1L, "Computador", 10.00, 100);
+        estoque.adicionarProduto(2L, "notebook", 500.00, 200);
+        estoque.adicionarProduto(3L, "Cadeira", 300.00, 5000);
 
         estoque.exibirProdutos();
 
